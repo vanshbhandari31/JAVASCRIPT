@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OBJECTS</title>
+</head>
+<body>
+
+<script>
+    //OBJECT -  AN OBJECT GROUPS MULTIPLE OBJECTS TOGETHER
+
+    const product={
+        name:'socks',
+        price:1090
+    };
+    console.log(product)
+    //inital value ( eg: name) is the property
+    console.log(product.name);
+    product.name='cotton socks';
+    console.log(product)
+    //property:value
+    product.newprop=true;
+    console.log(product);
+    delete product.newprop;
+    console.log(product);
+
+
+    const product2={
+        name:'shirt',
+        ['deliver-time']:'1 day',
+        fun: function func1(){
+            console.log('function inside an object');
+        }
+
+    };
+    console.log(product2['name']) //bracket notation to access value , we use bracket notation at times to avoid connfusiuion , ie. eg deliver-time , js may interpret - as  minus
+    console.log(product2['deliver-time']);
+
+    //inside an object , we can store any type of value
+    //object inside an object is also possible.
+    // for nested objets , we use , multiple dot notation to access the nested value
+    //fucntion can also be stored inside an object
+    product2.fun();
+    //FUCNTION INSIDE AN OBJECT = METHOD
+    //E.G. CONSOLE IS AN OBJECT , LOG IS A METHOD
+    //OBJECT + FUNCTION = MEHTOD
+    console.log(product2);
+    //BUILT IN JSON OBJECT
+    const js=JSON.stringify((product2)); //conversion of JS TO JSON
+    console.log(js);
+    console.log(typeof js);
+
+    jsback=JSON.parse(js);
+    console.log(jsback);
+    console.log(typeof jsback);//conversion to js object back
+
+    //localStorage.setItem('name', 'string to be stored')
+    //local storgage supports only the storage of strings, hence need of json.stringify
+    // null is something we want intentianlly to be empty for some value
+
+
+    //USAGE OF PROPERTIES  / METHODS:
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+    //AUTO BOXING : JS HAS A SPECIAL PROPERTY CALLED AUTOBOXING WHICH WRAPS THE STRING INTO AN  OBJECT FIRST AND THEN USES THE METHOD FOR IT
+    //AUTOBOX DOESNT WORK WITH NULL AND UNDEFINIED
+    // objects are references
+    const object1={
+        message:'hello'
+    };
+    //this value is not stored , reference is stored
+    // if we create another like :-
+    console.log(typeof object1);
+    const object2=object1;
+    //this doesnt create a variable , instead , creates a referencse , COPY BY REFERNCE
+    object1.message='gooddddd';
+    console.log(object1);
+    // even CONST was used , value can be changed ,as it is only a reference and not a variable stored in computer
+    //objects can not be compared directly , BECAUSE THEY ARE REFERENCSES
+
+    //DESTRUCTURING :-
+    const object4={
+        msg:'hellooo',
+        price:7799
+    };
+    const {msg,price}=object4; // stores the value from the object in the same variable name outside .
+    console.log(msg);
+    console.log(price);
+
+    //SHORT HAND PROPERTY
+    const object5={
+        msg:msg
+    };
+    console.log(object5);
+
+    //SHORT HAND METHOD
+    const object6={
+        msg,
+        /*
+        method:function fucntion1(){
+            console.log('from object method');
+        }
+        */
+        method(){
+            console.log('from object method 2.o');
+        }
+         
+    };
+    console.log(object6);
+    object6.method();
+
+
+
+</script>
+
+</html>
