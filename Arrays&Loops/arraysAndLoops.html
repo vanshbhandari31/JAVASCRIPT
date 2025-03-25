@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays and Loops</title>
+</head>
+<body>
+    <script>
+        const myArray=[1,2,3,4,10]
+        console.log(myArray);
+        console.log(myArray[4]);
+        //arrays are accessible index wise
+        //values of the arrays are mutable
+        //arrays can have different datatypes in a single array
+        //an array can also be stored in an array
+        // array  ->object
+        // length can be used to get lenght of array
+        console.log(myArray.length);
+        // .psuh -> adds a value to the array
+        myArray.push(100);
+        console.log(myArray);
+        // .splice() -> remove a value from an array
+        myArray.splice(3,2);
+        console.log(myArray);
+
+
+        let i =1;
+        while(i<=5){
+            console.log(i);
+            i++;
+        }
+
+
+        for (let j = 0; j <5; j++) {
+            console.log(j);
+
+        }
+
+    </script>
+</body>
+</html>
