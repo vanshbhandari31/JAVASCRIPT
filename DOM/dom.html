@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+<button>hello</button>
+<button id="jsbutton" class="jsbutton">button2 </button>
+<button onclick="nikitashorty()" class="nikita">pagal ladki</button>
+<script>
+    let a=2;
+    // let a;
+    // var a=2;
+//mutilple declartions are not allowed
+
+  console.log(document.querySelector('button').innerHTML);
+  console.log(document.querySelector('.jsbutton').innerHTML);
+  console.log(document.getElementById("jsbutton").innerHTML);
+  document.querySelector('button').innerHTML='changed';
+  document.querySelector('.jsbutton').innerHTML='button2 changed';
+  const buttonElement =document.querySelector('.jsbutton').innerHTML;
+  console.log(buttonElement);
+  let avr=2;
+  console.log(avr);
+  avr=45;
+  console.log(avr);
+
+//DOM HELPS TO COMBINE JS AND HTML TOGETHER ,GIVES JS CONTROL OF WEBPAGE.
+  //document.querySelector();   lets us select any elemnt from the page and put to JS
+
+  // document.body.innerHTML='helllo';
+  // document.title='good';
+  // document.write("hekllkio");
+  // window.alert("hi");
+  // alert("hihihhi");
+
+
+
+  //document object models the webpage.
+ //   document object is linked to the webpage , changes in this object brings changes to the webpage
+  //console.log(document.body.innerHTML);
+
+</script>
+</body>
+</html>
