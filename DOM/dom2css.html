@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM2</title>
+    //spacing inside is called PADDING
+    //spacing outside is called margin
+    <style>
+
+        .cssSubButton{
+            color: white;
+            background-color: black;
+            border: none;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .cssCalcButton{
+            background-color: green;
+            padding: 10px;
+            color: white;
+            font-size: 15px ;
+            cursor: pointer;
+        }
+        .cssPrice{
+            padding: 10px;
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+<p>YouTube Subscribe Button</p>
+<button  class="js-subButton cssSubButton" onclick="subscribe()">Subscribe</button>
+<p>ROCK PAPER SCISORS PROJECT</p>
+<a href="rockpaper/rockpaperDOM.html">CLICK HERE</a>
+
+<p>AMAZON SHIPPING CHARGE CALCULATOR</p>
+<p>Order under 40$ -> +10$ Shipping</p>
+<p>Order above 40$ -> Free Shipping</p>
+<p>Enter Price <input onkeydown="handleKey(event)";
+    placeholder="cost of shipping";
+    class="js-price cssPrice" type="text"></p>
+<button class="cssCalcButton" onclick="shippingCalc()">Calculate</button>
+<p class="js-finalCost"></p>
+
+
+
+<script>
+    String(25);
+    console.log('25'-5);//this will do automatic type coersion , but not same in case of addition :
+    console.log('25'+5)//Hence preffered to not to do maths with strings;
+    //window->contains the browser which included , pop ups ,console , document etc.
+    function handleKey(event){
+        let keyCheck=(event.key);
+        if(keyCheck==='Enter'){
+            shippingCalc();
+        }
+    }
+    function shippingCalc(){
+        let cost =(document.querySelector(".js-price")).value;
+        //console.log(`${cost}`);
+        cost=Number(cost);
+        //DOM ALWAYS GIVES US A STRING VALUE , TO DO SOME MATHS OVER IT , WE NEED TO CONVERT IT MANUALLY AS REQUIRED
+        if(cost>=40){
+            document.querySelector(".js-finalCost").innerHTML=`${cost}`;
+        }
+        else {
+            cost=cost+10;
+            document.querySelector(".js-finalCost").innerHTML=`${cost}`;
+        }
+
+    }
+  function subscribe(){
+    const check=document.querySelector('.js-subButton ').innerText
+    if(check==='Subscribe'){
+      document.querySelector('.js-subButton').innerHTML='Subscribed'
+    }else{
+      document.querySelector('.js-subButton').innerHTML='Subscribe'
+    }
+  }
+
+
+</script>
+</body>
+</html>
