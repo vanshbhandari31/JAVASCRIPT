@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ROCK-PAPER-SCISOSRS</title>
+</head>
+<body>
+<p>ROCK PAPER SCISSORS</p>
+<button onclick="
+    let compMove='';
+    const compChoice=Math.random();
+    if(compChoice< 1/3){
+        compMove='ROCK';
+    }
+    if(compChoice>2/3){
+        compMove='SCISSORS';
+    }
+    else{
+        compMove='PAPER';
+    }
+    let result='';
+    if(compMove==='ROCK'){
+        result='TIE'
+    }
+    else if(compMove==='PAPER'){
+        result='LOOSE';
+    }
+    else{
+        result='WIN';
+    }
+
+    alert(`you picked ROCK , computer picked ${compMove}. you ${result}`);
+    ">Rock</button>
+
+
+<button onclick="
+    let compMove='';
+    const compChoice=Math.random();
+    if(compChoice< 1/3){
+        compMove='ROCK';
+    }
+    if(compChoice>2/3){
+        compMove='SCISSORS';
+    }
+    else{
+        compMove='PAPER';
+    }
+    let result='';
+    if(compMove==='ROCK'){
+        result='WIN'
+    }
+    else if(compMove==='PAPER'){
+        result='TIE';
+    }
+    else{
+        result='LOOSE';
+    }
+
+    alert(`you picked PAPER , computer picked ${compMove}. you ${result}`);
+    ">Paper</button>
+
+
+<button onclick="
+    let compMove='';
+    const compChoice=Math.random();
+    if(compChoice< 1/3){
+        compMove='ROCK';
+    }
+    if(compChoice>2/3){
+        compMove='SCISSORS';
+    }
+    else{
+        compMove='PAPER';
+    }
+    let result='';
+    if(compMove==='ROCK'){
+        result='LOOSE'
+    }
+    else if(compMove==='PAPER'){
+        result='WIN';
+    }
+    else{
+        result='TIE';
+    }
+
+    alert(`you picked SCISSORS , computer picked ${compMove}. you ${result}`);
+    ">Scissors</button>
+
+<script>
+
+</script>
+</body>
+</html>
